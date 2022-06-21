@@ -22,8 +22,15 @@
     overflow-wrap: anywhere;
 }
 
+
 .tarea-icono{
     width: 25px;
     height: 25px;
     margin: 5px;
+}
+
+.tarea-contenedor.finalizada{
+    background-color: blueviolet;
+    text-decoration: line-through;
+    color:cyan;
 }
