@@ -1,5 +1,6 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import '../hojaEstilos/Formulario.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Formulario(props){
     const [input, setInput] = useState('');
@@ -11,10 +12,11 @@ function Formulario(props){
     const manejarEnvio = evento => {
         evento.preventDefault();
         const tareaNueva = {
-            id: ,
+            id: uuidv4(),
             texto: input,
             finalizada: false
         }
+        props.onSubmit(tareaNueva);
     }
 
 

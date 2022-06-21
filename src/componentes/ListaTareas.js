@@ -7,7 +7,11 @@ function ListaTareas(){
 
     const [tareas, setTareas] = useState([]);
     const agregarTarea = tarea => {
-
+        if(tarea.texto.trim()){
+            tarea.texto = tarea.texto.trim();
+            const tareasActualizadas = [tarea, ... tareas];
+            setTareas(tareasActualizadas);
+        }
     }
     const eliminarTarea = tarea => {
 
@@ -17,7 +21,7 @@ function ListaTareas(){
     return(
         /*Uso fragmentos*/ 
         <>
-            <Formulario />
+            <Formulario onSubmit = {agregarTarea} />
             <div className="lista-tareas">
                 {
                     tareas.map((tarea) => 
