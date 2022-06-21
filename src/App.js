@@ -1,5 +1,8 @@
+import React from 'react';
 import logo from './imagenes/logo.png';
 import './App.css';
+import Tarea from './componentes/Tarea.js';
+import './hojaEstilos/tarea.css';
 
 function App() {
   return (
@@ -13,6 +16,7 @@ function App() {
       </div>
       <div className='lista-tareas'>
         <h1>Mis Tareas</h1>
+        <Tarea texto = 'Aprender React '/>
       </div>
 
     </div>
