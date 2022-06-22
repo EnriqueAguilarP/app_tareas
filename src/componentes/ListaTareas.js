@@ -13,8 +13,9 @@ function ListaTareas(){
             setTareas(tareasActualizadas);
         }
     }
-    const eliminarTarea = tarea => {
-
+    const eliminarTarea = id => {
+        const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
+        setTareas(tareasActualizadas);
     }
 
 
@@ -30,6 +31,7 @@ function ListaTareas(){
                             id= {tarea.id}
                             texto = {tarea.texto}
                             finalizada = {tarea.finalizada}
+                            eliminarTarea = {eliminarTarea}
                         />
 
                     )
