@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './imagenes/logo.png';
 import './App.css';
 import ListaTareas from './componentes/ListaTareas';
+import './hojaEstilos/Tarea.css'
 
 function App() {
   return (

@@ -18,6 +18,16 @@ function ListaTareas(){
         setTareas(tareasActualizadas);
     }
 
+    const finalizarTarea = id => {
+        const tareasActualizadas = tareas.map(tarea =>{
+            if(tarea.id === id){
+                tarea.finalizada = !tarea.finalizada;
+            }
+            return tarea;
+        });
+        setTareas(tareasActualizadas);
+    }
+
 
     return(
         /*Uso fragmentos*/ 
@@ -31,6 +41,7 @@ function ListaTareas(){
                             id= {tarea.id}
                             texto = {tarea.texto}
                             finalizada = {tarea.finalizada}
+                            finalizarTarea = {finalizarTarea}
                             eliminarTarea = {eliminarTarea}
                         />
 
